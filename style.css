@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf5;
+    color: #292929;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #e85d04;
+}
+
+.login-btn {
+    background: #e85d04;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+/* HERO */
+.hero {
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 8%;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 560px;
+}
+
+.small-title {
+    color: #e85d04;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #e85d04;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    display: flex;
+    background: white;
+    padding: 7px;
+    border-radius: 35px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    max-width: 500px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 14px 18px;
+    font-size: 15px;
+}
+
+.search-box button {
+    border: none;
+    background: #e85d04;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+
+/* CATEGORIES */
+
+.categories {
+    background: white;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.category {
+    width: 120px;
+    height: 110px;
+    background: #fff4e8;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 35px;
+    transition: 0.3s;
+}
+
+.category p {
+    font-size: 15px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.category:hover {
+    transform: translateY(-7px);
+    background: #ffe3c2;
+}
+
+
+/* RECIPES */
+
+.recipes-section {
+    padding: 80px 8%;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+}
+
+.view-btn {
+    border: 1px solid #e85d04;
+    background: transparent;
+    color: #e85d04;
+    padding: 11px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+/* CARDS */
+
+.recipes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.13);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.rating {
+    color: #f4a261;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #777;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card-bottom span {
+    color: #777;
+    font-size: 13px;
+}
+
+.card-bottom button {
+    border: none;
+    background: #e85d04;
+    color: white;
+    padding: 9px 13px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 90px 8%;
+    background: #fff0df;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about h2 span {
+    color: #e85d04;
+}
+
+.about p:last-child {
+    max-width: 650px;
+    margin: auto;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #252525;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer p {
+    color: #bbb;
+    margin-top: 10px;
+}
+
+.copyright {
+    margin-top: 25px !important;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+
+    .recipes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-image img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .search-box {
+        margin: auto;
+    }
+
+    .recipes {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+}
