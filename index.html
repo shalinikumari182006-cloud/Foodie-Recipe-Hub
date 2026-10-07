@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie Recipe Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🍴 Foodie
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#recipes">Recipes</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <button class="login-btn">Login</button>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">WELCOME TO FOODIE</p>
+
+            <h1>
+                Delicious food,
+                <span>made with love.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover delicious recipes, explore new flavours
+                and cook something amazing today.
+            </p>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search your favourite recipe..."
+                >
+
+                <button onclick="searchRecipe()">🔍 Search</button>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80"
+                alt="Healthy food">
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+
+        <h2>Explore Categories</h2>
+
+        <div class="category-container">
+
+            <div class="category">🍕<p>Pizza</p></div>
+            <div class="category">🍔<p>Burger</p></div>
+            <div class="category">🍝<p>Pasta</p></div>
+            <div class="category">🥗<p>Healthy</p></div>
+            <div class="category">🍰<p>Dessert</p></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECIPES -->
+    <section class="recipes-section" id="recipes">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="small-title">OUR MENU</p>
+                <h2>Popular Recipes</h2>
+            </div>
+
+            <button class="view-btn">View All →</button>
+
+        </div>
+
+
+        <div class="recipes">
+
+
+            <!-- CARD 1 -->
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+                    alt="Momos">
+
+                <div class="card-content">
+
+                    <div class="rating">
+                        ⭐ 4.9
+                    </div>
+
+                    <h3>Veg Momos</h3>
+
+                    <p>
+                        Delicious steamed momos filled with
+                        fresh vegetables.
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <span>⏱ 30 min</span>
+
+                        <button onclick="showRecipe('Veg Momos')">
+                            View Recipe
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80"
+                    alt="Pizza">
+
+                <div class="card-content">
+
+                    <div class="rating">
+                        ⭐ 4.8
+                    </div>
+
+                    <h3>Cheese Pizza</h3>
+
+                    <p>
+                        Cheesy and delicious homemade
+                        Italian-style pizza.
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <span>⏱ 40 min</span>
+
+                        <button onclick="showRecipe('Cheese Pizza')">
+                            View Recipe
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+                    alt="Burger">
+
+                <div class="card-content">
+
+                    <div class="rating">
+                        ⭐ 4.7
+                    </div>
+
+                    <h3>Veg Burger</h3>
+
+                    <p>
+                        Juicy and yummy burger with
+                        fresh vegetables.
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <span>⏱ 25 min</span>
+
+                        <button onclick="showRecipe('Veg Burger')">
+                            View Recipe
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=600&q=80"
+                    alt="Pasta">
+
+                <div class="card-content">
+
+                    <div class="rating">
+                        ⭐ 4.9
+                    </div>
+
+                    <h3>Creamy Pasta</h3>
+
+                    <p>
+                        Creamy, rich and delicious pasta
+                        for a perfect meal.
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <span>⏱ 35 min</span>
+
+                        <button onclick="showRecipe('Creamy Pasta')">
+                            View Recipe
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div>
+            <p class="small-title">ABOUT FOODIE</p>
+
+            <h2>
+                Cooking should be
+                <span>fun & delicious.</span>
+            </h2>
+
+            <p>
+                Foodie Recipe Hub helps you discover easy,
+                tasty and exciting recipes that you can make
+                at home.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <h2>🍴 Foodie Recipe Hub</h2>
+
+        <p>
+            Discover. Cook. Enjoy.
+        </p>
+
+        <p class="copyright">
+            © 2026 Foodie Recipe Hub
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
